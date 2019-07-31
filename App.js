@@ -5,6 +5,7 @@ import Input from './app/components/Input'
 import Title from './app/components/Title'
 import { actionCreators } from './app/components/todoListRedux'
 import store from './app/components/store'
+import Await from './app/components/Await'
 
 export default class App extends Component {
   state = {}
@@ -34,19 +35,20 @@ export default class App extends Component {
   render() {
     const { todos } = this.state
     return (
-      <View>
-        <Title>
-          To-Do List
-        </Title>
-        <Input
-          placeholder={'Type a todo, then hit enter!'}
-          onSubmitEditing={this.onAddTodo}
-        />
-        <List
-          list={todos}
-          onPressItem={this.onRemoveTodo}
-        />
-      </View>
+//      <View>
+//        <Title>
+//          To-Do List
+//        </Title>
+//        <Input
+//          placeholder={'Type a todo, then hit enter!'}
+//          onSubmitEditing={this.onAddTodo}
+//        />
+//        <List
+//          list={todos}
+//          onPressItem={this.onRemoveTodo}
+//        />
+//      </View>
+        <Await />
     );
   }
 }
